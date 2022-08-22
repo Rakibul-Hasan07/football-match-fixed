@@ -29,7 +29,7 @@ function clickToPlayerAdded(btnValue) {
     showPlayer(playerArray);
     const playerLength = playerArray.length;
     // console.log(playerLength);
-    document.getElementById('calculate-btn').addEventListener('click', function(){
+    document.getElementById('calculate-btn').addEventListener('click', function () {
         const perPlayerAmount = document.getElementById('per-player-amount');
         const playerAmount = perPlayerAmount.value;
         // console.log(playerAmount);
@@ -38,5 +38,23 @@ function clickToPlayerAdded(btnValue) {
         // console.log(additon);
         const playerExpense = document.getElementById('player-expense');
         playerExpense.innerText = additon;
+    })
+    document.getElementById('calculate-total-btn').addEventListener('click', function(){
+        const managerAmount = document.getElementById('manager-amount');
+        const managerAmountString = managerAmount.value;
+        const managerAmountConvert = parseFloat(managerAmountString);
+        
+        const coachAmount = document.getElementById('coach-amount');
+        const coachAmountString = coachAmount.value;
+        const coachAmountConvert = parseFloat(coachAmountString);
+
+        const playerExpenseAmount = document.getElementById('player-expense');
+        const sentPlayerAmount = playerExpenseAmount.innerText;
+        const sentPlayerAmountConvert = parseFloat(sentPlayerAmount);
+
+        const totalAmount = sentPlayerAmountConvert + managerAmountConvert + coachAmountConvert;
+        
+        document.getElementById('total-amount').innerText = totalAmount;
+        
     })
 }
