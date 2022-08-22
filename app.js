@@ -17,6 +17,7 @@ function showPlayer(playerCart) {
     
 }
 function clickToPlayerAdded(btnValue) {
+    btnValue.disabled = true;
     const playerName = btnValue.parentNode.parentNode.children[0].innerText;
 
 
