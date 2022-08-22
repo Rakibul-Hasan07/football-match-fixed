@@ -11,15 +11,30 @@
     <!-- Daisyui link -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@2.24.0/dist/full.css" rel="stylesheet" type="text/css" />
 </head>
+<style>
+    .banner{
+        height: 80vh;
+        width: 100%;
+        background-image: url(images/alison.jpg);
+        background-repeat: no-repeat;
+        background-size: 100% 100%;
+        opacity: 0.5;
+    }
+</style>
 
-<body>
+<body class="bg-zinc-500">
     <!-- header start -->
     <header>
-
+        <div class="banner">
+            <div class=" text-style text-white text-center pt-20 px-40">
+                <h1 class=" text-8xl">Select Your Best Five</h1>
+                <p class="text-2xl font-bold pt-5">Brazil is the most successful national team in the FIFA World Cup, being crowned winner five times: 1958, 1962, 1970, 1994 and 2002. The also has the best overall performance in the World Cup competition,</p>
+            </div>
+        </div>
     </header>
     <!-- header end -->
     <main>
-        <section class="w-9/12 mx-auto mt-10">
+        <section class="w-9/12 mx-auto my-10">
             <div class="grid grid-cols-4 gap-4">
                 <div class="grid grid-cols-3 col-span-3 gap-4">
                     <!-- player-1 -->
@@ -27,7 +42,7 @@
                         <div class="card w-full bg-base-100 shadow-xl gap-4 mt-6">
                             <img src="images/neymer.jpg" alt="" class="" />
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title font-bold">Neymer Jr</h2>
+                                <h2 class="card-title font-bold">Neymer </h2>
                                 <p class=" font-bold">32 Goals 120 Asists</p>
                                 <div class="card-actions">
                                     <button class="btn btn-primary px-14 text-xl font-bold"
@@ -81,10 +96,10 @@
                     <!-- player-5 -->
                     <div>
                         <div class="card w-full bg-base-100 shadow-xl gap-4 mt-6">
-                            <img src="images/neymer.jpg" alt="" class="" />
+                            <img src="images/mercelo.jpg" alt="" class="" />
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title">Neymer Jr</h2>
-                                <p>32 Goals 120 Asists</p>
+                                <h2 class="card-title font-bold">Mercelo</h2>
+                                <p class="font-bold">30 Goals 110 Asists</p>
                                 <div class="card-actions">
                                     <button class="btn btn-primary px-14 text-xl font-bold"
                                         onclick="clickToPlayerAdded(this)">SELECT</button>
@@ -95,10 +110,10 @@
                     <!-- player-6 -->
                     <div>
                         <div class="card w-full bg-base-100 shadow-xl gap-4 mt-6">
-                            <img src="images/neymer.jpg" alt="" class="" />
+                            <img src="images/richarlison.jpg" alt="" class="" />
                             <div class="card-body items-center text-center">
-                                <h2 class="card-title">Neymer Jr</h2>
-                                <p>32 Goals 120 Asists</p>
+                                <h2 class="card-title font-bold">Richarlison</h2>
+                                <p class="font-bold">20 Goals 90 Asists</p>
                                 <div class="card-actions">
                                     <button class="btn btn-primary px-14 text-xl font-bold"
                                         onclick="clickToPlayerAdded(this)">SELECT</button>
@@ -109,7 +124,7 @@
                 </div>
 
                 <div>
-                    <div class="h-60 rounded-xl">
+                    <div class="h-60 bg-white pt-3 rounded-xl">
                         <h1 class="text-3xl font-bold text-center pt-6">Select Best V</h1>
                         <div>
                             <table>
@@ -129,7 +144,7 @@
 
                             </div>
                         </div>
-                        <div class="px-20 mt-3">
+                        <div class="px-20 mt-3 flex justify-center">
                             <button id="calculate-btn" class="btn btn-primary px-10">Calculate</button>
                         </div>
                         <p class="text-white text-xl font-bold pt-2 px-3">Player Expense $<span
@@ -147,8 +162,8 @@
                                     type="text">
                             </div>
 
-                            <div class="px-12 mt-3">
-                                <button id="calculate-total-btn" class="btn btn-primary px-10">Calculate Total</button>
+                            <div class="px-8 mt-3 flex justify-center">
+                                <button id="calculate-total-btn" class="btn btn-primary">Calculate Total</button>
                             </div>
                             <p class="text-white font-bold text-xl pb-5 mx-3 pt-5">Total $<span id="total-amount">0</span></p>
                             
