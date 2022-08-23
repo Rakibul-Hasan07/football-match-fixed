@@ -12,9 +12,10 @@ function showPlayer(playerCart) {
        <td>${name}</td>
        `;
         ulNameAdded.appendChild(tr);
-        
+
+
     }
-    
+
 }
 function clickToPlayerAdded(btnValue) {
     btnValue.disabled = true;
@@ -32,26 +33,29 @@ function clickToPlayerAdded(btnValue) {
     document.getElementById('calculate-btn').addEventListener('click', function () {
         const perPlayerAmount = document.getElementById('per-player-amount');
         const playerAmount = perPlayerAmount.value;
-
         const amount = parseFloat(playerAmount);
-        const additon = amount * playerLength;
+        const totalExpense = amount * playerLength;
 
         const playerExpense = document.getElementById('player-expense');
-        playerExpense.innerText = additon;
+        playerExpense.innerText = totalExpense;
     })
     document.getElementById('calculate-total-btn').addEventListener('click', function () {
+        //get manager input field
         const managerAmount = document.getElementById('manager-amount');
         const managerAmountString = managerAmount.value;
         const managerAmountConvert = parseFloat(managerAmountString);
 
+        //get coach input field
         const coachAmount = document.getElementById('coach-amount');
         const coachAmountString = coachAmount.value;
         const coachAmountConvert = parseFloat(coachAmountString);
 
+        //get player expense innerText
         const playerExpenseAmount = document.getElementById('player-expense');
         const sentPlayerAmount = playerExpenseAmount.innerText;
         const sentPlayerAmountConvert = parseFloat(sentPlayerAmount);
 
+        //calculate total amount
         const totalAmount = sentPlayerAmountConvert + managerAmountConvert + coachAmountConvert;
 
         document.getElementById('total-amount').innerText = totalAmount;
